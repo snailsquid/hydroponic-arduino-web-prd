@@ -10,7 +10,7 @@ const server = http.createServer(app);
 const wss = new WebSocket.Server({ server }); // WebSocket server on the same port
 
 const PORT_MAIN_SERVER = process.env.PORT_MAIN_SERVER || 3000; // Main server will run on port 3000
-const DATA_FILE = path.join(__dirname, '../../data.json'); // Path to data.json (two levels up from server.js)
+const DATA_FILE = path.join(__dirname, '../data.json'); // Path to data.json (two levels up from server.js)
 
 console.log('__dirname:', __dirname);
 // Middleware to parse JSON bodies from incoming requests
