@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Sensor Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@^3"></script>
+<script src="https://cdn.jsdelivr.net/npm/luxon@^2"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@^1"></script>
+<body>
+    <div class="container">
+        <h1>Arduino Sensor Dashboard</h1>
+
+        <div class="sensor-readings">
+            <div class="reading-card">
+                <h2>Distance</h2>
+                <p id="currentDistance">N/A cm</p>
+            </div>
+            <div class="reading-card">
+                <h2>TDS</h2>
+                <p id="currentTDS">N/A ppm</p>
+            </div>
+        </div>
+
+        <button id="clearGraphsButton" class="clear-button">Clear All Data & Graphs</button>
+
+        <div class="chart-container">
+            <canvas id="distanceChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="tdsChart"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
